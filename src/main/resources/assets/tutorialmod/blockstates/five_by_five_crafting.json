@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "tutorialmod:block/five_by_five_crafting"
+    }
+  }
+}

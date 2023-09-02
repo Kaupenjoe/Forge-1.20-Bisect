@@ -1,0 +1,21 @@
+{
+  "type": "tutorialmod:five_by_five_crafting",
+  "pattern": [
+    "IIIII",
+    "IISII",
+    "  S  ",
+    "  S  ",
+    "  S  "
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "tutorialmod:hammer"
+  }
+}
