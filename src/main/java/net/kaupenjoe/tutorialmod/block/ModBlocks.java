@@ -21,6 +21,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> FIVE_BY_FIVE_CRAFTING = registerBlock("five_by_five_crafting",
             () -> new FiveByFiveCraftingBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 
+    public static final RegistryObject<Block> KAUPEN_FURANCE = registerBlock("kaupen_furnace",
+            () -> new KaupenFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

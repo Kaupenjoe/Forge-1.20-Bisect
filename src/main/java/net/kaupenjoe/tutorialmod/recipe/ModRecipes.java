@@ -14,6 +14,9 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<FiveByFiveCraftingRecipe>> FIVE_BY_FIVE_CRAFTING =
             SERIALIZERS.register("five_by_five_crafting", FiveByFiveCraftingRecipe.Serializer::new);
 
+    public static final RegistryObject<RecipeSerializer<KaupenFurnaceRecipe>> KAUPEN_FURNACE_RECIPE =
+            SERIALIZERS.register("kaupen_furnace", () -> KaupenFurnaceRecipe.Serializer.INSTANCE);
+
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
     }

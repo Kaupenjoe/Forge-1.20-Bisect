@@ -2,9 +2,11 @@ package net.kaupenjoe.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
+import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.recipe.ModRecipes;
 import net.kaupenjoe.tutorialmod.screen.FiveByFiveCraftingScreen;
+import net.kaupenjoe.tutorialmod.screen.KaupenFurnaceScreen;
 import net.kaupenjoe.tutorialmod.screen.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -35,6 +37,8 @@ public class TutorialMod {
         ModMenuTypes.register(modEventBus);
         ModRecipes.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -50,6 +54,9 @@ public class TutorialMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.HAMMER);
             event.accept(ModBlocks.FIVE_BY_FIVE_CRAFTING);
+
+            event.accept(ModBlocks.KAUPEN_FURANCE);
+            event.accept(ModItems.PEAT_BRICKS);
         }
     }
 
@@ -65,6 +72,7 @@ public class TutorialMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             MenuScreens.register(ModMenuTypes.FIVE_BY_FIVE_CRAFTING.get(), FiveByFiveCraftingScreen::new);
+            MenuScreens.register(ModMenuTypes.KAUPEN_FURNACE_MENU.get(), KaupenFurnaceScreen::new);
         }
     }
 }

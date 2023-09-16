@@ -17,6 +17,9 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<FiveByFiveCraftingMenu>> FIVE_BY_FIVE_CRAFTING =
             registerMenuType(FiveByFiveCraftingMenu::new, "five_by_five_crafting");
 
+    public static final RegistryObject<MenuType<KaupenFurnaceMenu>> KAUPEN_FURNACE_MENU =
+            registerMenuType(KaupenFurnaceMenu::new, "kaupen_furnace_menu");
+
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));

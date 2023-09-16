@@ -1,5 +1,7 @@
 {
   "item.tutorialmod.hammer": "Hammer",
+  "item.tutorialmod.peat_bricks": "Peat Bricks",
 
-  "block.tutorialmod.five_by_five_crafting": "5x5 Crafting Table"
+  "block.tutorialmod.five_by_five_crafting": "5x5 Crafting Table",
+  "block.tutorialmod.kaupen_furnace": "Kaupen Furnace"
 }
