@@ -26,6 +26,11 @@ public class KaupenFurnaceRecipe extends AbstractCookingRecipe {
         return Serializer.INSTANCE;
     }
 
+    @Override
+    public RecipeType<?> getType() {
+        return Type.INSTANCE;
+    }
+
     public static class Type implements RecipeType<KaupenFurnaceRecipe> {
         public static final Type INSTANCE = new Type();
     }
